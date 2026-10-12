@@ -1,0 +1,234 @@
+
+.stApp {
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+    color: #FFFFFF;
+}
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+    background-color: transparent !important;
+}
+.stApp::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("__COVER_BACKGROUND__");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.stApp > div {
+    position: relative;
+    z-index: 1;
+}
+[data-testid="stHeader"] { background: transparent; }
+.block-container {
+    max-width: none;
+    padding-top: 2.2rem;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-bottom: 3rem;
+}
+.hero-wrap {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 28px 0;
+    margin-bottom: 1.2rem;
+    box-shadow: none;
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
+}
+.eyebrow {
+    margin: 0 0 12px;
+    color: #FFFFFF;
+    font-size: .9rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+.hero-title {
+    margin: 0;
+    font-size: clamp(2.2rem, 6vw, 3.35rem);
+    line-height: 1.05;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+.hero-dot { color: #FFFFFF; }
+.hero-subtitle {
+    margin: 16px 0 18px;
+    color: #FFFFFF;
+    line-height: 1.75;
+    font-size: 1.15rem;
+    font-weight: 600;
+    max-width: 520px;
+}
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+.hero-tag {
+    padding: 4px 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+.panel {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 24px;
+    margin-top: 18px;
+    box-shadow: none;
+}
+.st-key-summary_result {
+    margin-top: 22px;
+    background: #ffffff !important;
+    border: 1px solid rgba(17, 17, 17, .14);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .12);
+    color: #111111;
+}
+.section-heading {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: .25rem;
+}
+.section-note {
+    color: #FFFFFF;
+    font-size: 1.12rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: .85rem;
+}
+.st-key-feature [data-testid="stWidgetLabel"] p,
+.st-key-feature [data-baseweb="radio"],
+.st-key-feature [data-baseweb="radio"] * {
+    color: #FFFFFF !important;
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
+}
+.stMarkdown p {
+    color: #FFFFFF;
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+.st-key-summary_result .section-heading,
+.st-key-summary_result .section-note,
+.st-key-summary_result .stMarkdown p,
+.st-key-summary_result .stMarkdown li,
+.st-key-summary_result .stMarkdown h1,
+.st-key-summary_result .stMarkdown h2,
+.st-key-summary_result .stMarkdown h3,
+.st-key-summary_result .stMarkdown h4 {
+    color: #111111;
+}
+[data-testid="stTextArea"] textarea {
+    background: #fbfdff;
+    border: 1px solid #d7e3f8;
+    border-radius: 18px;
+    line-height: 1.75;
+    color: #111111;
+    padding: 18px;
+    font-size: 17px;
+    font-weight: 600;
+}
+[data-testid="stTextArea"] textarea:focus {
+    border-color: #7fa8ef;
+    box-shadow: 0 0 0 1px #7fa8ef;
+}
+.stButton button, .stFormSubmitButton button, .stDownloadButton button {
+    border-radius: 14px;
+    min-height: 3.15rem;
+    font-weight: 750;
+    font-size: 1.05rem;
+}
+.stFormSubmitButton button[kind="primary"] {
+    background: linear-gradient(135deg, #4f84f4 0%, #3f73e8 100%);
+    border: none;
+    color: #FFFFFF;
+}
+.stFormSubmitButton button[kind="primary"]:hover {
+    background: linear-gradient(135deg, #3f73e8 0%, #3566d8 100%);
+}
+.stButton button, .stDownloadButton button {
+    border: 1px solid #d7e2f5;
+    background: #fff;
+    color: #111111;
+}
+.stButton button:hover, .stDownloadButton button:hover {
+    border-color: #bdd1f4;
+    color: #111111;
+}
+.footer-copy {
+    margin-top: 2.8rem;
+    border-top: 0;
+    padding-top: 1.1rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+@media (max-width: 780px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-wrap { padding: 22px 0; }
+    .block-container { padding: 1.1rem .9rem 2rem; }
+}
+
+/* ===== QUIZ RESULT ===== */
+
+.st-key-quiz_result {
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    color: #111111;
+}
+
+/* Chữ trong phần trắc nghiệm */
+.st-key-quiz_result .stMarkdown p,
+.st-key-quiz_result .stMarkdown h3,
+.st-key-quiz_result label,
+.st-key-quiz_result [data-testid="stWidgetLabel"] {
+    color: #111111 !important;
+}
+
+/* Từng câu hỏi */
+.st-key-quiz_result [data-testid="stRadio"] {
+    margin-bottom: 15px;
+}
+
+/* Nút nộp bài */
+.st-key-quiz_result [data-testid="stFormSubmitButton"] button {
+    background: #F07C28;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+/* Hover */
+.st-key-quiz_result [data-testid="stFormSubmitButton"] button:hover {
+    background: #D96516;
+    color: white;
+}
+
